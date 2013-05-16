@@ -18,6 +18,8 @@ Just clone or copy the repo into the plugins directory of Redmine. This will exp
 
 ## Usage
 
-Because this plugin can update the database you must specify an extra env var if you want it to actually run. The following code will run the task against the database version just print it out to the screen:
+Because this plugin can update the database you must specify an extra env var if you want it to actually update the database. The following code will run the task against the database:
 
     rake convert:to_html for_reals=true
+    
+If you do not include the `for_reals` env var it will only print the changes to screen. This allows you to see what will happen without affecting your database.
